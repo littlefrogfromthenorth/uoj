@@ -22,6 +22,4 @@ RUN cd /root && ./setup
 COPY docker/up /root/up
 RUN chmod +x /root/up
 
-VOLUME [ "/var/lib/mysql", "/var/uoj_data", "/var/uoj_data_copy", "/opt/uoj/web", "/opt/uoj/judger", "/var/svn", "/var/log" ]
-
 CMD /root/up
