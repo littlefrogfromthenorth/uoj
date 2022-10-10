@@ -7,7 +7,7 @@ setLAMPConf() {
     # Set Apache UOJ site conf
     cat >/etc/apache2/sites-available/000-uoj.conf <<UOJEOF
 <VirtualHost *:80>
-    #ServerName local_uoj.ac
+    ServerName uoj-production.up.railway.app
     ServerAdmin admin@none
     DocumentRoot /var/www/uoj
     SetEnvIf Request_URI "^/judge/.*$" judgelog
