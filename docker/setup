@@ -22,6 +22,9 @@ setLAMPConf() {
     XSendFilePath /var/svn/problem
 </VirtualHost>
 UOJEOF
+	cat >/etc/apache2/httpd.conf <<UOJEOF
+ServerName uoj-production.up.railway.app
+UOJEOF
     # Enable modules and make UOJ site conf enabled
     a2ensite 000-uoj.conf && a2dissite 000-default.conf &&
     a2enmod rewrite headers && sed -i -e '172s/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
